@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+    <table>
+        <tr>
+            <td>Chỉ số cân nặng</td>
+            <td><input id="nặng" type="text" ></td>
+        </tr><br>
+    <tr>
+        <td>Chỉ số chiều cao</td>
+        <td><input id="cao" type="text"></td>
+    </tr>
+    </table>
+     <button type="button" onclick="show();">Tính toán</button> <input id="tính" type="text">
+</head>
+<script>
+   function show(){
+       let weight=parseFloat(document.getElementById('nặng').value);
+       let height=parseFloat(document.getElementById('cao').value);
+       bmi=weight/(height*height);
+     if(bmi<18){
+         document.getElementById('tính').value='Underweight';
+     }else if(bmi<25){
+         document.getElementById('tính').value='Normal';
+     }else if(bmi<30){
+         document.getElementById('tính').value='Overweight';
+     }else {
+         document.getElementById('tính').value='Obese'
+     }
+   }
+
+
+</script>
+<body>
+
+</body>
+</html>
